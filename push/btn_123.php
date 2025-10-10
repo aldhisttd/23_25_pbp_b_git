@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <button>Aldhi Albadri</button>
+    <input type="button" value="Aldhi Albadri">
 </body>
 </html>
