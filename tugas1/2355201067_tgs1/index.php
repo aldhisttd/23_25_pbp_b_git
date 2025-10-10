@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* Background full screen dengan efek blur dan gradasi */
     body {
       background: linear-gradient(135deg, rgba(10, 24, 61, 0.9), rgba(72, 12, 168, 0.9)), 
                   url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
@@ -22,7 +21,6 @@
       color: white;
     }
 
-    /* Card transparan gelap */
     .card {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.2);
@@ -55,11 +53,13 @@
       border: 1.5px solid rgba(255,255,255,0.3);
       border-radius: 10px;
       color: #fff;
+      font-weight: 600; /* 🔥 bikin teks input lebih tebal */
       transition: all 0.3s;
     }
 
     .form-control::placeholder {
       color: rgba(255,255,255,0.6);
+      font-weight: 400;
     }
 
     .form-control:focus {
