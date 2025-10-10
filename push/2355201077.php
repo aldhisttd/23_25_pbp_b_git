@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>kkk</title>
 </head>
 <body>
-    <p>hai</p>
+    <h1>alya febi ayu</h1>
 </body>
 </html>
