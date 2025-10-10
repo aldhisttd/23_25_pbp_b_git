@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Muhammad Haikal AnsoriJ</h1>
+    <h1>Muhammad Haikal Ansori</h1>
 </body>
 </html>
