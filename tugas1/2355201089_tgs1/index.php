@@ -1,104 +1,132 @@
-<?php
-$pesan = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nama = htmlspecialchars($_POST["nama"]);
-  $username = htmlspecialchars($_POST["username"]);
-  $email = htmlspecialchars($_POST["email"]);
-
-  // Simpan data ke file
-  $data = "Nama: $nama | Username: $username | Email: $email\n";
-  file_put_contents("data.txt", $data, FILE_APPEND);
-
-  $pesan = "Data berhasil disimpan!";
-}
-?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Register</title>
+  <meta charset="utf-8">
+  <title>Form Input Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+    *{
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
     }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 350px;
+    .bg-img{
+      background: url('bg.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
     }
-    h2 {
+    .bg-img:after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+    }
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 999;
       text-align: center;
-      margin-bottom: 20px;
-      color: #333;
+      padding: 60px 32px;
+      width: 370px;
+      transform: translate(-50%,-50%);
+      background: rgba(255,255,255,0.04);
+      box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
     }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-      color: #444;
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    input:focus {
-      border-color: #2575fc;
-      box-shadow: 0 0 5px #2575fc;
-      outline: none;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #2575fc;
+    .content header{
       color: white;
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0 0 35px 0;
+      font-family: 'Montserrat',sans-serif;
+    }
+    .field{
+      position: relative;
+      height: 45px;
+      width: 100%;
+      display: flex;
+      background: rgba(255,255,255,0.94);
+      margin-bottom: 16px;
+    }
+    .field span{
+      color: #222;
+      width: 40px;
+      line-height: 45px;
+    }
+    .field input{
+      height: 100%;
+      width: 100%;
+      background: transparent;
       border: none;
-      border-radius: 8px;
+      outline: none;
+      color: #222;
+      font-size: 16px;
+      font-family: 'Poppins',sans-serif;
+    }
+    .field input[type="submit"]{
+      background: #3498db;
+      border: 1px solid #2691d9;
+      color: white;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 600;
       cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
+      font-family: 'Montserrat',sans-serif;
     }
-    button:hover {
-      background-color: #1a5ed8;
-    }
-    .pesan {
-      text-align: center;
-      color: green;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .field input[type="submit"]:hover{
+      background: #2691d9;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Form Register</h2>
-    <?php if (!empty($pesan)): ?>
-      <p class="pesan"><?= $pesan; ?></p>
-    <?php endif; ?>
-    <form method="POST" action="">
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
 
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+  <div class="bg-img">
+    <div class="content">
+      <header>Form Input Data</header>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+      <!-- PHP PROSES -->
+      <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $nama = htmlspecialchars($_POST['nama']);
+          $username = htmlspecialchars($_POST['username']);
+          $email = htmlspecialchars($_POST['email']);
+          
+          echo "<div style='color:white; margin-bottom:15px; font-family:Poppins;'>
+                  <b>Data berhasil dikirim!</b><br>
+                  Nama: $nama <br>
+                  Username: $username <br>
+                  Email: $email
+                </div>";
+      }
+      ?>
 
-      <button type="submit">Kirim</button>
-    </form>
+      <!-- FORM INPUT -->
+      <form action="" method="POST">
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input type="text" name="nama" required placeholder="Nama Lengkap">
+        </div>
+        <div class="field">
+          <span class="fa fa-id-badge"></span>
+          <input type="text" name="username" required placeholder="Username">
+        </div>
+        <div class="field">
+          <span class="fa fa-envelope"></span>
+          <input type="email" name="email" required placeholder="Email">
+        </div>
+        <div class="field">
+          <input type="submit" value="SUBMIT">
+        </div>
+      </form>
+
+    </div>
   </div>
+
 </body>
 </html>
