@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       transition: 0.3s;
     }
     input:focus {
-      border-color: #2575fc;
-      box-shadow: 0 0 5px #2575fc;
+      border-color: #a00000ff;
+      box-shadow: 0 0 5px #a00000ff;
       outline: none;
     }
     button {
