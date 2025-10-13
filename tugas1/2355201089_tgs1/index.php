@@ -1,15 +1,15 @@
 <?php
-// Jika form dikirim (POST)
+$pesan = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = htmlspecialchars($_POST["nama"]);
-    $username = htmlspecialchars($_POST["username"]);
-    $email = htmlspecialchars($_POST["email"]);
+  $nama = htmlspecialchars($_POST["nama"]);
+  $username = htmlspecialchars($_POST["username"]);
+  $email = htmlspecialchars($_POST["email"]);
 
-    // Simpan data ke file (bisa diganti ke database nanti)
-    $data = "Nama: $nama | Username: $username | Email: $email\n";
-    file_put_contents("data.txt", $data, FILE_APPEND);
+  // Simpan data ke file
+  $data = "Nama: $nama | Username: $username | Email: $email\n";
+  file_put_contents("data.txt", $data, FILE_APPEND);
 
-    $pesan = "Data berhasil disimpan!";
+  $pesan = "Data berhasil disimpan!";
 }
 ?>
 <!DOCTYPE html>
@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       transition: 0.3s;
     }
     input:focus {
-      border-color: #a00000ff;
-      box-shadow: 0 0 5px #a00000ff;
+      border-color: #2575fc;
+      box-shadow: 0 0 5px #2575fc;
       outline: none;
     }
     button {
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (!empty($pesan)): ?>
       <p class="pesan"><?= $pesan; ?></p>
     <?php endif; ?>
-    <form action="" method="POST">
+    <form method="POST" action="">
       <label for="nama">Nama Lengkap</label>
       <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
 
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Masukkan email" required>
 
-      <button type="submit">Daftar</button>
+      <button type="submit">Kirim</button>
     </form>
   </div>
 </body>
