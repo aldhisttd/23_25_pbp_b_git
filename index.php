@@ -6,6 +6,13 @@
     <title>List Nama</title>
 </head>
 <body>
-    <h1>Galih</h1>
+    <h1>raja</h1>
+    <h1>List Nama kelas 5 Pagi B</h1>
+    <ul>
+        <li>Aldhi Albadri</li>
+        <li>Rima</li>
+        <li>galih</li>
+    </ul>
+
 </body>
 </html>
