@@ -12,8 +12,10 @@
     <h1>List Nama kelas 5 Pagi B</h1>
     <ul>
         <li>Aldhi Albadri</li>
+        <li>Rima</li>
         <li>Suci</li>
     </ul>
+
 </body>
 
 </html>
