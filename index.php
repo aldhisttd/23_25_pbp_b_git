@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List Nama</title>
 </head>
 <body>
     <h1>raja</h1>
+    <h1>List Nama kelas 5 Pagi B</h1>
+    <ul>
+        <li>Aldhi Albadri</li>
+    </ul>
 </body>
 </html>
