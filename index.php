@@ -7,9 +7,5 @@
 </head>
 <body>
     <h1>falrian</h1>
-    <h1>list nama kelas 5 pagi b</h1>
-    <ul>
-        <li>aldhi albadri</li>
-    </ul>
 </body>
 </html>
