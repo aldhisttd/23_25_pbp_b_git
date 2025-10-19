@@ -1,3 +1,7 @@
+<?php
+$koneksi = new mysqli("localhost", "root", "", "rumah_sakit");
+$data = $koneksi->query("SELECT * FROM pasien ORDER BY id_pasien DESC");
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
