@@ -1,6 +1,5 @@
 <?php
-// Koneksi ke database
-$koneksi = mysqli_connect("localhost", "root", "", "kost");
+include 'koneksi.php'; // koneksi sudah include port 3307
 
 // Cek koneksi
 if (!$koneksi) {
