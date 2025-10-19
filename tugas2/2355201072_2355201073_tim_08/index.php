@@ -78,12 +78,12 @@ $type = $_GET['type'] ?? '';
           <form action="proses_tambah.php" method="post" novalidate>
             <div class="mb-3">
               <label class="form-label fw-semibold text-primary">Judul Buku</label>
-              <input type="text" name="judul" class="form-control border-primary" placeholder="Mis. Laskar Pelangi" required>
+              <input type="text" name="judul" class="form-control border-primary" required>
             </div>
 
             <div class="mb-3">
               <label class="form-label fw-semibold text-danger">Penulis</label>
-              <input type="text" name="penulis" class="form-control border-danger" placeholder="Mis. Andrea Hirata" required>
+              <input type="text" name="penulis" class="form-control border-danger" required>
             </div>
 
             <div class="mb-3">
