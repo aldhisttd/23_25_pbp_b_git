@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $harga = $_POST['harga'] ?? 0;
     $total = $jumlah * $harga;
 
-    $sql = "INSERT INTO tiket (nama, tujuan, tanggal, jumlah, harga, total)
+    $sql = "INSERT INTO tiket_bus (nama, tujuan, tanggal, jumlah, harga, total)
             VALUES ('$nama', '$tujuan', '$tanggal', '$jumlah', '$harga', '$total')";
 
     if ($conn->query($sql) === TRUE) {
@@ -24,7 +24,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn->close();
-} else {
-    echo "Form belum dikirim.";
-}
+} 
 ?>

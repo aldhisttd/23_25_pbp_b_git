@@ -4,15 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Pemesanan Tiket Bus</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
-  <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Pemesanan Tiket Bus</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -25,14 +16,13 @@
     }
 
     .container {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      width: 350px;
-      text-align: center;
-      animation: fadeIn 0.8s ease-in-out;
-    }
+  width: 500px; /* atau 600px kalau mau lebih besar */
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 50px auto;
+}
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
