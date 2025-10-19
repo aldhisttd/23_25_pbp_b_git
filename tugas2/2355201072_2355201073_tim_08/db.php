@@ -1,7 +1,7 @@
 <?php
 // UBAH sesuai environment kamu:
-$DB_HOST = '127.0.0.1';   // atau 'localhost'
-$DB_PORT = '3306';        // ganti ke 3307 jika MySQL kamu di 3307
+$DB_HOST = 'localhost';   // gunakan localhost
+$DB_PORT = '3306';        // ubah ke 3307 kalau di my.ini port=3307
 $DB_USER = 'root';
 $DB_PASS = '';            // default XAMPP: kosong
 $DB_NAME = 'data_buku';
