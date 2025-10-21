@@ -1,32 +1,3 @@
-<?php
-$koneksi = mysqli_connect("localhost", "root", "", "db_barbershop");
-
-if (!$koneksi) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
-
-// Proses input data
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = $_POST['nama_kepster'];
-    $tanggal = $_POST['tanggal'];
-    $jam_masuk = $_POST['jam_masuk'];
-    $jam_pulang = $_POST['jam_pulang'];
-    $keterangan = $_POST['keterangan'];
-
-    $query = "INSERT INTO absen (nama_kepster, tanggal, jam_masuk, jam_pulang, keterangan)
-              VALUES ('$nama', '$tanggal', '$jam_masuk', '$jam_pulang', '$keterangan')";
-    
-    if (mysqli_query($koneksi, $query)) {
-        header("Location: data_absen.php");
-        exit;
-    } else {
-        echo "Gagal menyimpan data: " . mysqli_error($koneksi);
-    }
-}
-
-mysqli_close($koneksi);
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -43,7 +14,7 @@ mysqli_close($koneksi);
       </div>
 
       <div class="card-body">
-        <form method="POST" action="">
+        <form method="POST" action="proses_absen.php">
           <div class="mb-3">
             <label class="form-label">Nama Kepster</label>
             <input type="text" name="nama_kepster" class="form-control" placeholder="Masukkan nama kepster" required>
